@@ -2,10 +2,13 @@
 moused = false;
 
 //Check para saber si la fruta se puede clickear
-grabbable = false;
+can_click = true;
 
 //Bandera para saber si la fruta esta en el menu
 menu = false;
 
 //Escalar imagen a los bordes dibujados
-scale = image_xscale;
+original_scale = 0.2;
+
+//ID de posicion que asignara el obj_fruit_deck
+fruit_position_id = -1;
