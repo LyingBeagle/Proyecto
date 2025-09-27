@@ -1,8 +1,7 @@
-//Si la fruta puede ser clickeada y el mouse esta sobre ella
-if(can_click && moused) {
-	//Nos aseguramos que el deck exista antes de llamarlo
-	if(instance_exists(obj_fruit_deck)){
-		//Llama a la funcion 'fruit_selected' del deck y se pasa a si mismo como argumento
-		obj_fruit_deck.fruit_selected(self);
-	}
+//Si la fruta puede ser clickeada y el mouse esta sobre ella y no tiene un cooldown
+if (instance_exists(obj_fruit_deck) && obj_fruit_deck.selection_cooldown <= 0) {
+    // Si la fruta puede ser clickeada y el mouse está sobre ella
+    if (can_click && moused) {
+        obj_fruit_deck.fruit_selected(self);
+    }
 }

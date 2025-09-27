@@ -1,6 +1,9 @@
 //Hereda eventos del objeto padre
 event_inherited();
 
+//Cooldown de seleccion de frutas (60 frames = 1s a 60fps)
+selection_cooldown = 0;
+
 //Guardando los sprites de las frutas a usar
 global.fruit_objects = [
 	obj_apple,
@@ -41,6 +44,9 @@ function fruit_selected(_selected_fruit_instance){
 	
 	//Generacion de 3 frutas
 	generate_bottom_fruits(self);
+	
+	//Inicio de cooldown
+	selection_cooldown = 60 //60 frames = 1 s 
 }
 
 // --- Inicializacion ---
