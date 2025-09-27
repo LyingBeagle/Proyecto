@@ -46,6 +46,7 @@
     {"id":{"name":"obj_fruit_parent","path":"objects/obj_fruit_parent/obj_fruit_parent.yy",},},
     {"id":{"name":"obj_grape","path":"objects/obj_grape/obj_grape.yy",},},
     {"id":{"name":"obj_mouse_manager","path":"objects/obj_mouse_manager/obj_mouse_manager.yy",},},
+    {"id":{"name":"obj_operation","path":"objects/obj_operation/obj_operation.yy",},},
     {"id":{"name":"obj_orange","path":"objects/obj_orange/obj_orange.yy",},},
     {"id":{"name":"obj_pear","path":"objects/obj_pear/obj_pear.yy",},},
     {"id":{"name":"obj_score","path":"objects/obj_score/obj_score.yy",},},

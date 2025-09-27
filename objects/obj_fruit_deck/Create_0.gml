@@ -32,7 +32,12 @@ current_fruit_instances = [];
 //Se llamara a esta funcion cuando se le haga click al objeto fruta
 function fruit_selected(_selected_fruit_instance){
 	show_debug_message("Fruta seleccionada en la posicion: " + string(_selected_fruit_instance.fruit_position_id));
-	//Por añadir
+	
+	if(instance_exists(obj_operation)){
+		obj_operation.add_to_operation(
+		_selected_fruit_instance.fraction_value,
+		_selected_fruit_instance.sprite_index); //Para mostrar la fruta en la operacion
+	}
 	
 	//Generacion de 3 frutas
 	generate_bottom_fruits(self);

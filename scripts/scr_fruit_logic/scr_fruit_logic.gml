@@ -29,7 +29,15 @@ function generate_bottom_fruits(_caller_object) {
     for (var i = 0; i < 3; i++) {
 		
         var _random_fruit_obj = global.fruit_objects[irandom(array_length(global.fruit_objects) - 1)];
-        var _new_fruit_instance = instance_create_layer(_caller_object.x_pos_fruit1 + (i * 300), _caller_object.y_pos_fruits, "Instances", _random_fruit_obj);
+		
+        var _current_x_pos = 0;
+        switch (i) {
+            case 0: _current_x_pos = _caller_object.x_pos_fruit1; break;
+            case 1: _current_x_pos = _caller_object.x_pos_fruit2; break;
+            case 2: _current_x_pos = _caller_object.x_pos_fruit3; break;
+        }
+        
+        var _new_fruit_instance = instance_create_layer(_current_x_pos, _caller_object.y_pos_fruits, "Instances", _random_fruit_obj);
 		
 		var _assigned_fraction = _fruit_fraction_map[? _random_fruit_obj];
 		
