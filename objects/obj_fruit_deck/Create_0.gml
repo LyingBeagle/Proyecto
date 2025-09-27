@@ -11,6 +11,14 @@ global.fruit_objects = [
 	//Mas frutas
 ];
 
+//-- Lista de fracciones disponibles --
+global.fractions = [
+	{display: "1/1", value: 1}, //Lo que se muestra y el valor real
+	{display: "1/2", value: 0.5},
+	{display: "1/4", value: 0.25},
+	{display: "3/4", value: 0.75}
+];
+
 //------ Posiciones para frutas deck ----
 y_pos_fruits = 550; //Se ajusta coordenada y segun la room
 x_pos_fruit1 = room_width / 2 - 300;

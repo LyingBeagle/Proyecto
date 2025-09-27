@@ -25,7 +25,16 @@ function generate_bottom_fruits(_caller_object) {
         }
 
         var _new_fruit_instance = instance_create_layer(_current_x_pos, y_pos_fruits, "Instances", _random_fruit_obj);
-        _new_fruit_instance.fruit_position_id = i;
+       
+	   //Se elige una fraccion de la lista
+	   var _random_fraction = global.fractions[irandom(array_length(global.fractions) - 1)];
+	   
+	   //Se asigna a la nueva fruta
+	   _new_fruit_instance.fraction_display = _random_fraction.display;
+	   _new_fruit_instance.fraction_value = _random_fraction.value;
+	   
+	   
+	   _new_fruit_instance.fruit_position_id = i;
 
         array_push(_caller_object.current_fruit_instances, _new_fruit_instance);
     }

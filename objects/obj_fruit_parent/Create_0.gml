@@ -12,3 +12,7 @@ original_scale = 0.2;
 
 //ID de posicion que asignara el obj_fruit_deck
 fruit_position_id = -1;
+
+//Variables para guardar fraccion en la fruta
+fraction_display = ""; //Texto mostrado, ej: "1/2
+fraction_value = 0; //Valor numerico, ej: 0.5
