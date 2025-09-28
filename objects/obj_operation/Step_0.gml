@@ -6,7 +6,7 @@ if(keyboard_check_pressed(vk_enter)){
 		
 		var _result = base_number;
 		
-		for(var i = 0;i<array_length(operation_list);i+=2){
+		for(var i = 0;i<array_length(operation_list);i++){
 			
 			var _part = operation_list[i];
 			var _operator = _part.operator;

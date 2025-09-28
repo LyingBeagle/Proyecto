@@ -1,3 +1,5 @@
+randomize(); //Asignar valores aleatorias al inicio del juego a cada fruta
+
 //Hereda eventos del objeto padre
 event_inherited();
 
