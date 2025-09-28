@@ -24,9 +24,11 @@ reset_operation = function(){
 	operation_list = [];
 	
 	//Si obj_score existe, se actualiza numero base con la puntuacion
+	/*
 	if(instance_exists(obj_score)){
 		base_number = obj_score.current_score;
 	}
+	*/
 	
 	//Eleccion del primer operador ed la ronda
 	next_operator = choose("+","-");

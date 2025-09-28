@@ -22,10 +22,14 @@ if(keyboard_check_pressed(vk_enter)){
 		show_debug_message("Resultado calculado: " + string(_result));
 		
 		//Validar resultados
-		if(_result < base_number && _result > 0){
+		if(_result < obj_score.current_score && _result > 0){
 			//Se actualiza puntuacion global
 			if(instance_exists(obj_score)){
 				obj_score.current_score = _result;	
+			}
+			
+			if(instance_exists(obj_time)){
+				obj_time.add_time(5);
 			}
 		}
 		
