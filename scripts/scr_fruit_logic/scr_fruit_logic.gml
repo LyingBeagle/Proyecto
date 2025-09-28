@@ -2,17 +2,17 @@
 /// @description Genera 3 frutas aleatorias en la parte inferior de la pantalla.
 function generate_bottom_fruits(_caller_object) {
 	
-	var _instance_array = _caller_object.current_fruit_instances;
-	
     // Primero, destruye las frutas que ya existen.
-    for (var i = 0; i < array_length(_instance_array); i++) {
-        var _fruit_id =_instance_array[i];
+    for (var i = 0; i < array_length(_caller_object.current_fruit_instances); i++) {
+        var _fruit_id =_caller_object.current_fruit_instances[i];
         if (instance_exists(_fruit_id)) {
             instance_destroy(_fruit_id);
         }
     }
     _caller_object.current_fruit_instances = []; // Resetea el array.
 	
+	
+	/* Asignacion aleatoria de fracciones para frutas
 	//Se crea un mapa para que las frutas iguales tengan el mismo valor
 	var _fruit_fraction_map = ds_map_create();
 	
@@ -24,6 +24,7 @@ function generate_bottom_fruits(_caller_object) {
 		//mapa clave: Objeto fruta, valor: fraccion
 		ds_map_add(_fruit_fraction_map, _fruit_type, _random_fraction);
 	}
+	*/
 
     // Genera 3 nuevas frutas
     for (var i = 0; i < 3; i++) {
@@ -39,17 +40,18 @@ function generate_bottom_fruits(_caller_object) {
         
         var _new_fruit_instance = instance_create_layer(_current_x_pos, _caller_object.y_pos_fruits, "Instances", _random_fruit_obj);
 		
-		var _assigned_fraction = _fruit_fraction_map[? _random_fruit_obj];
+		//var _assigned_fraction = _fruit_fraction_map[? _random_fruit_obj];
 		
+		/*
 	   //Se asigna a la nueva fruta
 	   _new_fruit_instance.fraction_display = _assigned_fraction.display;
 	   _new_fruit_instance.fraction_value = _assigned_fraction.value;
-	   
+	   */
 	   
 	   _new_fruit_instance.fruit_position_id = i;
 
         array_push(_caller_object.current_fruit_instances, _new_fruit_instance);
     }
 	
-	ds_map_destroy(_fruit_fraction_map);
+	//ds_map_destroy(_fruit_fraction_map);
 }

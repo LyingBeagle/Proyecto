@@ -22,6 +22,18 @@ global.fractions = [
 	{display: "3/4", value: 0.75}
 ];
 
+//Mapa para valores de frutas
+global.fruit_value_map = ds_map_create();
+
+
+for(var i = 0;i<array_length(global.fruit_objects);i++){
+	var _fruit_type = global.fruit_objects[i];
+	
+	var _random_fraction = global.fractions[irandom(array_length(global.fractions) - 1)];
+	
+	ds_map_add(global.fruit_value_map,_fruit_type,_random_fraction);
+}
+
 //------ Posiciones para frutas deck ----
 y_pos_fruits = 550; //Se ajusta coordenada y segun la room
 x_pos_fruit1 = room_width / 2 - 300;
@@ -46,7 +58,7 @@ function fruit_selected(_selected_fruit_instance){
 	generate_bottom_fruits(self);
 	
 	//Inicio de cooldown
-	selection_cooldown = 60 //60 frames = 1 s 
+	selection_cooldown = 30 //60 frames = 1 s 
 }
 
 // --- Inicializacion ---
