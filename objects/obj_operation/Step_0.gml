@@ -23,6 +23,9 @@ if(keyboard_check_pressed(vk_enter)){
 		
 		//Validar resultados
 		if(_result < obj_score.current_score && _result > 0){
+			
+			global.successful_operation++; //Se aumenta la cantidad de operaciones correctas
+			
 			//Se actualiza puntuacion global
 			if(instance_exists(obj_score)){
 				obj_score.current_score = _result;	

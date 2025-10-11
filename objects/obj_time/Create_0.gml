@@ -1,4 +1,4 @@
-var _initial_time = 60;
+var _initial_time = 20;
 time_in_microseconds = _initial_time * 1000000;
 
 function add_time(_seconds){

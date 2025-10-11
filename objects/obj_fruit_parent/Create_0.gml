@@ -24,3 +24,6 @@ if(variable_global_exists("fruit_value_map") && ds_exists(global.fruit_value_map
 	fraction_display = "N/A";
 	fraction_value = 1;
 }
+
+//Para rm_after
+menu_mode = false;

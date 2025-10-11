@@ -1,6 +1,13 @@
 if(time_in_microseconds > 0){
 	time_in_microseconds -= delta_time;
 }else{
-	//Si se llega a 0 se cierra el juego
-	game_end();
+	if(global.successful_operation >= 2){
+		show_debug_message("DEBUG 1");
+		//Si se tuvo 2 o mas operaciones correctas, se va a rm_after
+		room_goto(rm_after);
+	}else{
+		//No se lograron 2 o mas operaciones correctas
+		//Game Over
+		game_end();
+	}
 }

@@ -1,4 +1,12 @@
+//En caso de que la instancia ya exista
+if(instance_number(object_index)>1){
+	instance_destroy();
+	exit;
+}
+
 randomize(); //Asignar valores aleatorias al inicio del juego a cada fruta
+global.successful_operation = 0; //Operaciones correctas
+
 
 //Hereda eventos del objeto padre
 event_inherited();
