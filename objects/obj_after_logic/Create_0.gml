@@ -61,6 +61,7 @@ function fruit_clicked(_fruit_instance){
 	//Si ya se asigno a todas las frutas
 	if(fruits_left <= 0){
 		show_debug_message("Todas las frutas asignadas"); //Temporal
-		//Codigo a la siguiente abitacion
+		//Codigo a la siguiente habitacion
+		room_goto(rm_casino);
 	}
 }

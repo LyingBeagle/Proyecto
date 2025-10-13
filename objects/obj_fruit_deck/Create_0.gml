@@ -35,6 +35,7 @@ global.fractions = [
 //Mapa para valores de frutas
 global.fruit_value_map = ds_map_create();
 
+global.sprite_to_object_map = ds_map_create();
 
 for(var i = 0;i<array_length(global.fruit_objects);i++){
 	var _fruit_type = global.fruit_objects[i];
@@ -42,6 +43,12 @@ for(var i = 0;i<array_length(global.fruit_objects);i++){
 	var _random_fraction = global.fractions[irandom(array_length(global.fractions) - 1)];
 	
 	ds_map_add(global.fruit_value_map,_fruit_type,_random_fraction);
+}
+
+for(var i = 0;i < array_length(global.fruit_objects);i++){
+	var _fruit_obj = global.fruit_objects[i];
+    var _sprite = object_get_sprite(_fruit_obj);
+    ds_map_add(global.sprite_to_object_map, _sprite, _fruit_obj);
 }
 
 //------ Posiciones para frutas deck ----
@@ -74,3 +81,7 @@ function fruit_selected(_selected_fruit_instance){
 // --- Inicializacion ---
 //Generacion de las 3 frutas iniciales
 generate_bottom_fruits(self);
+
+
+//Mapa para modificadores
+global.fruit_modifiers = ds_map_create();
