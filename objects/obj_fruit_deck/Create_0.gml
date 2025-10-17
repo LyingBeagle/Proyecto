@@ -32,6 +32,19 @@ global.fractions = [
 	{display: "3/4", value: 0.75}
 ];
 
+//Si la dificultad es Medium o superior
+if(global.difficulty >= 1){
+	array_push(global.fractions, {display: "0.1", value: 0.1});
+	array_push(global.fractions, {display: "0.33", value: 0.33});
+}
+
+//Si la dificultad es Hard o superior
+if(global.difficulty >= 2){
+	array_push(global.fractions, {display: "2/3", value: 0.66});
+	array_push(global.fractions, {display: "1/3", value: 0.33});
+}
+
+
 //Mapa para valores de frutas
 global.fruit_value_map = ds_map_create();
 

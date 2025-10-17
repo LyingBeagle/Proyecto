@@ -11,8 +11,8 @@
   "name":"obj_fruit_deck",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"PlayRoom",
+    "path":"folders/Objects/PlayRoom.yy",
   },
   "parentObjectId":{
     "name":"obj_fruit_parent",

@@ -8,6 +8,12 @@ if(time_in_microseconds > 0){
 	}else{
 		//No se lograron 2 o mas operaciones correctas
 		//Game Over
-		game_end();
+		
+		//Resetear puntuacion
+		if (instance_exists(obj_score)) {
+            obj_score.current_score = 10;
+        }
+		
+		room_goto(rm_levels);
 	}
 }

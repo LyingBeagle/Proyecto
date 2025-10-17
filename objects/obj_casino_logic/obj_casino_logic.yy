@@ -10,8 +10,8 @@
   "name":"obj_casino_logic",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Logic",
+    "path":"folders/Objects/Logic.yy",
   },
   "parentObjectId":null,
   "persistent":false,

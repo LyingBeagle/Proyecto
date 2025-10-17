@@ -16,6 +16,8 @@ add_to_operation = function(_fruit_value, _fruit_sprite){
 	
 	array_push(operation_list, _operation_part);
 	
+	
+	
 	//Checkeo de modificadores
 	var _fruit_obj = global.sprite_to_object_map[? _fruit_sprite];
 	var _modifier = ds_map_find_value(global.fruit_modifiers, _fruit_obj);
@@ -24,8 +26,12 @@ add_to_operation = function(_fruit_value, _fruit_sprite){
 		array_push(active_modifiers, _modifier);
 	}
 	
-	//Se actualiza string que se muestra en pantalla
-	next_operator = choose("+","-");
+	// Elige el siguiente operador basándose en la dificultad
+	if (global.difficulty < 2) {
+	    next_operator = choose("+", "-");
+	} else {
+	    next_operator = choose("+", "-", "*", "/");
+	}
 }
 
 //Limpiar para siguiente operacion
@@ -33,8 +39,12 @@ reset_operation = function(){
 	operation_list = [];
 	active_modifiers = [];
 	
-	//Eleccion del primer operador ed la ronda
-	next_operator = choose("+","-");
+	// Elige el siguiente operador basándose en la dificultad
+	if (global.difficulty < 2) {
+	    next_operator = choose("+", "-");
+	} else {
+	    next_operator = choose("+", "-", "*", "/");
+	}
 }
 
 //Al inicio de todo

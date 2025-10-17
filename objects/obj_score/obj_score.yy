@@ -9,8 +9,8 @@
   "name":"obj_score",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"PlayRoom",
+    "path":"folders/Objects/PlayRoom.yy",
   },
   "parentObjectId":null,
   "persistent":true,

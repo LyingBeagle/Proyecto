@@ -18,16 +18,38 @@ if(keyboard_check_pressed(vk_enter)){
 			var _operator = _part.operator;
 			var _value = _part.value;
 			
-			if(_invert_ops){
-				_operator = (_operator == "+") ? "-" : "+";
+			var _fruit_obj = global.sprite_to_object_map[? _part.sprite];
+			var _modifier = ds_map_find_value(global.fruit_modifiers, _fruit_obj);
+			
+			if(is_undefined(_modifier)){
+				//Modificador Dividir fraccion (1/2) / 2
+				if(_modifier == "divide_fraction"){
+					_value /= 2;
+				}
+				//Modificador de invertir fraccion 1/3 -> 3/1
+				if(_modifier == "invert_fractrion" && _value!=0){
+					_value = 1/ _value;
+				}
 			}
 			
+			//Modificador de invertir operacion
+			if (_invert_ops) {
+		        switch (_operator) {
+		            case "+": _operator = "-"; break;
+		            case "-": _operator = "+"; break;
+		            case "*": _operator = "/"; break;
+		            case "/": _operator = "*"; break;
+		        }
+		    }
 			
-			if(_operator == "+"){
-				_result += _value;
-			}else{
-				_result -= _value;
-			}
+			
+			// --- Realizar el cálculo ---
+		    switch (_operator) {
+		        case "+": _result += _value; break;
+		        case "-": _result -= _value; break;
+		        case "*": _result *= _value; break;
+		        case "/": if (_value != 0) { _result /= _value; } break; // Evitar división por cero
+		    }
 		}
 		
 		//Modificador de dividir resultado a la mitad

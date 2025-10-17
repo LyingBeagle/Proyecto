@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_slots",
+  "%Name":"obj_button_hard",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_slots",
+  "name":"obj_button_hard",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button_buttom",
-    "path":"sprites/spr_button_buttom/spr_button_buttom.yy",
+    "name":"spr_button_medium",
+    "path":"sprites/spr_button_medium/spr_button_medium.yy",
   },
   "spriteMaskId":null,
   "visible":true,

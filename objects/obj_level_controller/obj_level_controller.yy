@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_time",
+  "%Name":"obj_level_controller",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_time",
+  "name":"obj_level_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"PlayRoom",
-    "path":"folders/Objects/PlayRoom.yy",
+    "name":"Logic",
+    "path":"folders/Objects/Logic.yy",
   },
   "parentObjectId":null,
   "persistent":false,
