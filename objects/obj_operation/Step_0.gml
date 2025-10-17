@@ -48,6 +48,7 @@ if(keyboard_check_pressed(vk_enter)){
 				obj_score.current_score = _result;	
 			}
 			
+			
 			if(instance_exists(obj_time)){
 				obj_time.add_time(5);
 			}

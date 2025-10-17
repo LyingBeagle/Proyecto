@@ -1,3 +1,5 @@
+if(room = rm_play){
+
 //Apariencia de la puntuacion
 draw_set_font(fnf_game);
 draw_set_color(c_white);
@@ -10,3 +12,5 @@ draw_text(room_width / 2, 60, current_score)
 //Se resertea la alineacion
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+}

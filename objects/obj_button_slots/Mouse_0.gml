@@ -4,7 +4,7 @@ if(!instance_exists(obj_casino_logic) || obj_casino_logic.state != "waiting"){
 }
 
 // Probabilidad de ganar (10% porciento)
-var _is_winner = (irandom(99) < 99);
+var _is_winner = (irandom(99) < 10);
 
 if(_is_winner){
 	//Se gano
@@ -29,6 +29,8 @@ if(_is_winner){
 }else{
 	//Se perdio
 	obj_casino_logic.state = "result_lose";
+	
 	obj_casino_logic.result_message = "Mala Suerte....";
+	obj_casino_logic.win_timer = 10 * 1000000;
 }
 

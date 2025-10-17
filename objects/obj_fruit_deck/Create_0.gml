@@ -80,7 +80,7 @@ function fruit_selected(_selected_fruit_instance){
 
 // --- Inicializacion ---
 //Generacion de las 3 frutas iniciales
-generate_bottom_fruits(self);
+//generate_bottom_fruits(self);
 
 
 //Mapa para modificadores
