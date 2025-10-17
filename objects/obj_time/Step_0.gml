@@ -14,6 +14,10 @@ if(time_in_microseconds > 0){
             obj_score.current_score = 10;
         }
 		
+		if(ds_exists(global.fruit_modifiers, ds_type_map)){
+			ds_map_clear(global.fruit_modifiers);
+		}
+		
 		room_goto(rm_levels);
 	}
 }
