@@ -5,6 +5,7 @@ if(instance_number(object_index)>1){
 }
 
 randomize(); //Asignar valores aleatorias al inicio del juego a cada fruta
+
 global.successful_operation = 0; //Operaciones correctas
 
 global.rounds_played = 0 //Para cantidad de rondas jugadas
