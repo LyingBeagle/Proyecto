@@ -1,3 +1,8 @@
+if(game_over_active){
+	exit;
+}
+
+
 if(time_in_microseconds > 0){
 	time_in_microseconds -= delta_time;
 }else{
@@ -9,15 +14,7 @@ if(time_in_microseconds > 0){
 		//No se lograron 2 o mas operaciones correctas
 		//Game Over
 		
-		//Resetear puntuacion
-		if (instance_exists(obj_score)) {
-            obj_score.current_score = 10;
-        }
-		
-		if(ds_exists(global.fruit_modifiers, ds_type_map)){
-			ds_map_clear(global.fruit_modifiers);
-		}
-		
-		room_goto(rm_levels);
+		game_over_active = true;
+		instance_create_layer(0, 0, "Instances", obj_gameover);
 	}
 }

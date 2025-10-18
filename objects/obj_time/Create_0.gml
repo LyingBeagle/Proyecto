@@ -1,6 +1,13 @@
- var _initial_time = 60; //X Segundos
+var _current_diff = 0;
+if (variable_global_exists("difficulty")) {
+    _current_diff = global.difficulty;
+}
+
+var _initial_time = 60; //X Segundos
+
+game_over_active = false; //Para el obj_gameover
  
- switch(global.difficulty){
+ switch(_current_diff){
 	 case 1: //Medium
 		_initial_time = 45;
 		break;
