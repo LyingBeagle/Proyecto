@@ -6,11 +6,6 @@ if(instance_number(object_index)>1){
 
 randomize(); //Asignar valores aleatorias al inicio del juego a cada fruta
 
-global.successful_operation = 0; //Operaciones correctas
-
-global.rounds_played = 0 //Para cantidad de rondas jugadas
-
-
 //Hereda eventos del objeto padre
 event_inherited();
 
@@ -28,41 +23,20 @@ global.fruit_objects = [
 ];
 
 //-- Lista de fracciones disponibles --
-global.fractions = [
+global.fractions_base = [
 	{display: "1/1", value: 1}, //Lo que se muestra y el valor real
 	{display: "1/2", value: 0.5},
 	{display: "1/4", value: 0.25},
 	{display: "3/4", value: 0.75}
 ];
 
-//Si la dificultad es Medium o superior
-if(global.difficulty >= 1){
-	array_push(global.fractions, {display: "0.1", value: 0.1});
-	array_push(global.fractions, {display: "0.33", value: 0.33});
-}
-
-//Si la dificultad es Hard o superior
-if(global.difficulty >= 2){
-	array_push(global.fractions, {display: "2/3", value: 0.66});
-	array_push(global.fractions, {display: "1/3", value: 0.33});
-}
-
-
-//Mapa para valores de frutas
 global.fruit_value_map = ds_map_create();
-
 global.sprite_to_object_map = ds_map_create();
+global.fruit_modifiers = ds_map_create();
 
-for(var i = 0;i<array_length(global.fruit_objects);i++){
-	var _fruit_type = global.fruit_objects[i];
-	
-	var _random_fraction = global.fractions[irandom(array_length(global.fractions) - 1)];
-	
-	ds_map_add(global.fruit_value_map,_fruit_type,_random_fraction);
-}
 
-for(var i = 0;i < array_length(global.fruit_objects);i++){
-	var _fruit_obj = global.fruit_objects[i];
+for (var i = 0; i < array_length(global.fruit_objects); i++) {
+    var _fruit_obj = global.fruit_objects[i];
     var _sprite = object_get_sprite(_fruit_obj);
     ds_map_add(global.sprite_to_object_map, _sprite, _fruit_obj);
 }
@@ -97,7 +71,3 @@ function fruit_selected(_selected_fruit_instance){
 // --- Inicializacion ---
 //Generacion de las 3 frutas iniciales
 //generate_bottom_fruits(self);
-
-
-//Mapa para modificadores
-global.fruit_modifiers = ds_map_create();

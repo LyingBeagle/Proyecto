@@ -75,6 +75,7 @@
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
     {"id":{"name":"scr_fruit_logic","path":"scripts/scr_fruit_logic/scr_fruit_logic.yy",},},
+    {"id":{"name":"scr_log_manager","path":"scripts/scr_log_manager/scr_log_manager.yy",},},
     {"id":{"name":"numbers","path":"sprites/numbers/numbers.yy",},},
     {"id":{"name":"spr_apple","path":"sprites/spr_apple/spr_apple.yy",},},
     {"id":{"name":"spr_banana","path":"sprites/spr_banana/spr_banana.yy",},},

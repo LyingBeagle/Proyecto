@@ -5,5 +5,6 @@ if(instance_number(object_index) >1 ){
 }
 
 //Valor base = 10
-current_score = 10;
+// Lee el puntaje de la variable global
+current_score = global.current_score;
 

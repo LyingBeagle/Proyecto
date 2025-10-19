@@ -61,13 +61,13 @@ if(keyboard_check_pressed(vk_enter)){
 		show_debug_message("Resultado calculado: " + string(_result));
 		
 		//Validar resultados
-		if(_result < obj_score.current_score && _result > 0){
+		if(_result < global.current_score && _result > 0){
 			
-			global.successful_operation++; //Se aumenta la cantidad de operaciones correctas
+			global.successful_operations++; //Se aumenta la cantidad de operaciones correctas
 			
 			//Se actualiza puntuacion global
 			if(instance_exists(obj_score)){
-				obj_score.current_score = _result;	
+				global.current_score = _result;	
 			}
 			
 			
