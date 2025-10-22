@@ -52,12 +52,12 @@ if (_is_winner) {
     }
 	
     obj_casino_logic.result_message = "Felicidades, ahora " + _win_fruit_name + " tiene el poder de " + _modifiers_text;
-    obj_casino_logic.win_timer = 10 * 1000000;
+    global._slot_used = true;
 }else{
 	//Se perdio
 	obj_casino_logic.state = "result_lose";
 	
 	obj_casino_logic.result_message = "Mala Suerte....";
-	obj_casino_logic.win_timer = 10 * 1000000;
+	global._slot_used = true;
 }
 
