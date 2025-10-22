@@ -1,5 +1,5 @@
 //Tecla ENTER fue presionada?
-if(keyboard_check_pressed(vk_enter)){
+if(keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_right)){
 	
 	//Solo se calcula si hay al menos 1 fruta en la operacion
 	if(array_length(operation_list) > 0){
