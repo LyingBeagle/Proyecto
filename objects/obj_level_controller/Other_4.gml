@@ -1,24 +1,23 @@
-global.difficulty = 1;
+//Iniciar variables
+global.difficulty = 0; //0 = Easy, 1 = Medium, 2 = Hard
+global.rounds_played = 0;
+global.successful_operations = 0;
+global.current_score = 10; // El puntaje empieza en 10
 
-//Reconstruye la lista de fracciones
+//Limpia los mapas de la sesión anterior
+ds_map_clear(global.fruit_value_map);
+ds_map_clear(global.fruit_modifiers);
+
+//Prepara la lista de fracciones (para la dificultad "Fácil" por defecto)
 global.fractions = [];
 for (var i = 0; i < array_length(global.fractions_base); i++) {
     var _f = global.fractions_base[i];
     array_push(global.fractions, { display: _f.display, value: _f.value });
 }
 
-//Nuevas fracciones
-array_push(global.fractions, {display: "0.1", value: 0.1});
-array_push(global.fractions, {display: "0.33", value: 0.33});
-
-//Borra y vuelve a llenar el mapa de valores
-ds_map_clear(global.fruit_value_map);
+//Llena el mapa de valores con la asignación aleatoria INICIAL (para Fácil)
 for (var i = 0; i < array_length(global.fruit_objects); i++) {
     var _fruit_type = global.fruit_objects[i];
     var _random_fraction = global.fractions[irandom(array_length(global.fractions) - 1)];
     ds_map_add(global.fruit_value_map, _fruit_type, _random_fraction);
 }
-
-// Log: (Evento, Rondas, Score) - ambos son 0 al inicio
-log_event("Partida_Iniciada_Medio", 0, global.current_score);
-room_goto(rm_play);

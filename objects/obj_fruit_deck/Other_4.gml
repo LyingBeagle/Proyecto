@@ -1,5 +1,6 @@
 if (room == rm_play) {
     
+	/*
     // Limpia los mapas de la ronda anterior
     ds_map_clear(global.fruit_value_map);
     ds_map_clear(global.fruit_modifiers);
@@ -26,6 +27,7 @@ if (room == rm_play) {
         var _random_fraction = global.fractions[irandom(array_length(global.fractions) - 1)];
         ds_map_add(global.fruit_value_map, _fruit_type, _random_fraction);
     }
+	*/
     
     //Genera las primeras frutas
     generate_bottom_fruits(self);

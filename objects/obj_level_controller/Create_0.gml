@@ -15,8 +15,32 @@ ini_open("save.ini");
 ini_write_string("Player","ID", global.playerID);
 ini_close();
 
-//Iniciar variables
-global.difficulty = 0; //0 = Easy, 1 = Medium, 2 = Hard
-global.rounds_played = 0;
-global.successful_operations = 0;
-global.current_score = 10; // El puntaje empieza en 10
+
+//-- Lista de frutas disponible
+global.fruit_objects = [
+	obj_apple,
+	obj_banana,
+	obj_orange,
+	obj_pear,
+	obj_grape
+	//Mas frutas
+];
+
+//-- Lista de fracciones disponibles --
+global.fractions_base = [
+	{display: "1/1", value: 1}, //Lo que se muestra y el valor real
+	{display: "1/2", value: 0.5},
+	{display: "1/4", value: 0.25},
+	{display: "3/4", value: 0.75}
+];
+
+//Crea los mapas globales (vacíos) UNA SOLA VEZ
+global.fruit_value_map = ds_map_create();
+global.sprite_to_object_map = ds_map_create();
+global.fruit_modifiers = ds_map_create();
+
+for (var i = 0; i < array_length(global.fruit_objects); i++) {
+    var _fruit_obj = global.fruit_objects[i];
+    var _sprite = object_get_sprite(_fruit_obj);
+    ds_map_add(global.sprite_to_object_map, _sprite, _fruit_obj);
+}

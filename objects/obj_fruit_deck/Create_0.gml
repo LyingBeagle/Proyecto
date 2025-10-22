@@ -12,6 +12,7 @@ event_inherited();
 //Cooldown de seleccion de frutas (60 frames = 1s a 60fps)
 selection_cooldown = 0;
 
+/*
 //Guardando los sprites de las frutas a usar
 global.fruit_objects = [
 	obj_apple,
@@ -40,6 +41,8 @@ for (var i = 0; i < array_length(global.fruit_objects); i++) {
     var _sprite = object_get_sprite(_fruit_obj);
     ds_map_add(global.sprite_to_object_map, _sprite, _fruit_obj);
 }
+
+*/
 
 //------ Posiciones para frutas deck ----
 y_pos_fruits = 550; //Se ajusta coordenada y segun la room
