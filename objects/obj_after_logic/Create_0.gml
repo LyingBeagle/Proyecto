@@ -1,3 +1,5 @@
+log_event("Enter_Room_After", global.rounds_played, global.current_score);
+
 fractions_to_assign = [];
 var _num_fruits = array_length(global.fruit_objects);
 

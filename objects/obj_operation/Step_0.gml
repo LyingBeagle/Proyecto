@@ -58,6 +58,10 @@ if(keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_right)){
 			_result /= 2;
 		}
 		
+		// Registra el resultado de la operación, sea cual sea
+		var _log_msg = "Operation_Result: " + string(_result);
+		log_event(_log_msg, global.rounds_played, global.current_score);
+		
 		show_debug_message("Resultado calculado: " + string(_result));
 		
 		//Validar resultados

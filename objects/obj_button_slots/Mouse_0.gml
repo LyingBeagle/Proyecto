@@ -25,6 +25,9 @@ if (_is_winner) {
     // Se escoge un modificador random
     var _win_modifier = _modifiers[irandom(array_length(_modifiers) - 1)];
 
+	var _log_msg = "Modifier_Win: " + _win_modifier + " on " + _win_fruit_name;
+    log_event(_log_msg, global.rounds_played, global.current_score);
+
     // Se guarda el modificador en mapa global
     ds_map_add(global.fruit_modifiers, _win_fruit_obj, _win_modifier);
 
