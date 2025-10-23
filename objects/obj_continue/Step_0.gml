@@ -1,3 +1,3 @@
-if(global._slot_used){
+if(_slot_used){
 	image_alpha = 1;
 }

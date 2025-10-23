@@ -4,8 +4,6 @@ if(instance_number(object_index)>1){
 	exit;
 }
 
-randomize(); //Asignar valores aleatorias al inicio del juego a cada fruta
-
 //Hereda eventos del objeto padre
 event_inherited();
 

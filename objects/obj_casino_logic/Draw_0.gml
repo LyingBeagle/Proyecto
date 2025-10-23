@@ -17,7 +17,7 @@ if(state == "result_win" && sprite_exists(win_fruit_sprite)){
 	draw_sprite_ext(win_fruit_sprite, 0, 840, 100, _sprite_scale, _sprite_scale, 0, c_white, 1);
 	
 	//Dibujado en la parte inferior de la maquina
-	draw_sprite_ext(win_fruit_sprite, 0, 580, 430, _sprite_scale, _sprite_scale, 0, c_white, 1);
+	draw_sprite_ext(win_fruit_sprite, 0, 580, 470, _sprite_scale, _sprite_scale, 0, c_white, 1);
 }
 
 draw_set_halign(fa_left);

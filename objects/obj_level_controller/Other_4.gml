@@ -1,3 +1,6 @@
+
+randomize(); //Asignar valores aleatorias al inicio del juego a cada fruta
+
 //Iniciar variables
 global.difficulty = 0; //0 = Easy, 1 = Medium, 2 = Hard
 global.rounds_played = 0;

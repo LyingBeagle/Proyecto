@@ -2,7 +2,7 @@
 if((state = "result_win" || state = "result_lose")){
 	//win_timer -= delta_time; //contador con delta time
 	
-	state = "finished"; //Termino de operaciones
+	//state = "finished"; //Termino de operaciones
 		
 	global.successful_operation = 0;
 	

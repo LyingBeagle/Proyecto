@@ -4,7 +4,7 @@ if(!instance_exists(obj_casino_logic) || obj_casino_logic.state != "waiting"){
 }
 
 // Probabilidad de ganar (10% porciento)
-var _is_winner = (irandom(99) < 10);
+var _is_winner = (irandom(99) < 10); //en 90 para probar si funciona bien el ganar
 
 if (_is_winner) {
     // Se ganó
@@ -29,22 +29,22 @@ if (_is_winner) {
     ds_map_add(global.fruit_modifiers, _win_fruit_obj, _win_modifier);
 
     // Se actualiza el controlador del casino
-    obj_casino_logic.state = "result_win";
+	obj_casino_logic.state = "result_win";
     obj_casino_logic.win_fruit_sprite = _win_fruit_sprite;
     
     var _modifiers_text = "";
     switch (_win_modifier) {
         case "invert_operation":
-            _modifiers_text = "Invertir Operación";
+            _modifiers_text = "Invertir Operacion";
             break;
         case "halve_result":
             _modifiers_text = "Reducir el Resultado a la Mitad";
             break;
         case "divide_fraction":
-            _modifiers_text = "Dividir su Fracción a la Mitad";
+            _modifiers_text = "Dividirse a la Mitad";
             break;
         case "invert_fraction":
-            _modifiers_text = "Invertir su Fracción";
+            _modifiers_text = "Invertir su Fraccion";
             break;
         default:
             _modifiers_text = "un poder misterioso";
@@ -52,12 +52,11 @@ if (_is_winner) {
     }
 	
     obj_casino_logic.result_message = "Felicidades, ahora " + _win_fruit_name + " tiene el poder de " + _modifiers_text;
-    global._slot_used = true;
 }else{
 	//Se perdio
 	obj_casino_logic.state = "result_lose";
 	
 	obj_casino_logic.result_message = "Mala Suerte....";
-	global._slot_used = true;
 }
 
+    obj_continue._slot_used = true;
